@@ -1,0 +1,64 @@
+\documentclass[compress,aspectratio=169]{ctexbeamer}
+
+\setbeamertemplate{theorems}[numbered] 
+\setbeamertemplate{caption}[numbered]
+
+\usetheme{Luebeck}
+\useoutertheme{miniframes}
+
+\usecolortheme{seahorse}
+\usecolortheme{orchid}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{xfp}
+\usepackage{multicol}
+
+\usefonttheme{structuresmallcapsserif}
+
+%设定中文字体
+\setCJKmainfont[AutoFakeSlant=0.25]{Noto Serif CJK SC}      %谷歌衬线字体
+\setCJKsansfont[AutoFakeSlant=0.25]{Noto Sans CJK SC}       %谷歌无衬线字体
+\setCJKmonofont[AutoFakeBold,AutoFakeSlant=0.25]{FangSong}  %仿宋字体
+
+\AtBeginSection[]
+{
+	\begin{frame}
+        \begin{multicols}{1}
+            \tableofcontents[currentsection,hideallsubsections]
+        \end{multicols}
+	\end{frame}
+}
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+        \begin{multicols}{2}
+            \tableofcontents[currentsection,currentsubsection]
+        \end{multicols}
+	\end{frame}
+}
+
+\title{浅谈傅里叶变换与不确定性原理}
+
+\author{李宇轩}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{目录}
+    \begin{multicols}{1}
+        \tableofcontents[hideallsubsections]
+    \end{multicols}
+\end{frame}
+
+\setlength{\parskip}{6pt}
+
+\input{Section1.tex}
+
+\end{document}
