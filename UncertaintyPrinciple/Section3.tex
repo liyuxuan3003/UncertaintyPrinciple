@@ -1,0 +1,132 @@
+\section{傅里叶变换与不确定性原理}
+
+\begin{frame}
+    \frametitle{位置？动量？}
+    我们知道，在量子力学中，粒子的位置服从波函数的概率分布，实际上，粒子的动量亦服从概率分布。因为微观粒子并没有确定的轨道，即没有确定的位置和动量。
+
+    现在的问题是，动量服从何种概率分布呢？
+\end{frame}
+
+\begin{frame}
+    \frametitle{位置和动量间的傅里叶关系}
+    实际上，在量子力学中
+    \begin{center}
+        动量，是位置的傅里叶变换。
+    \end{center}
+    % 更确切的说，动量遵循的概率分布$\phi(\vb*{p})$是波函数$\psi(\vb*{r})$的傅里叶变换。
+
+    为什么动量$\vb*{p}$和位置$\vb*{r}$两个看似毫无关系的物理量，会通过傅里叶变换相联系？
+\end{frame}
+
+\begin{frame}
+    \frametitle{位置和动量间的傅里叶关系}
+    波函数$\psi(\vb*{r})$的傅里叶变换直接给出的，姑且记作$\phi_0(\vb*{k})$，描述的是$\psi(\vb*{r})$中各个角波矢$\vb*{k}$的平面简谐波的出现概率，考虑到傅里叶变换是在三维空间中进行的
+    \begin{equation}
+        \phi_0(\vb*{k})=\frac{1}{(2\pi)^{3/2}}\Itnt\psi(\vb*{r})\exp(-\i\vb*{k}\cdot\vb*{r})\dd^3x
+    \end{equation}
+    相应的逆变换为
+    \begin{equation}
+        \psi(\vb*{r})=\frac{1}{(2\pi)^{3/2}}\Itnt\phi_0(\vb*{k})\exp(\i\vb*{k}\cdot\vb*{r})\dd^3k
+    \end{equation}
+\end{frame}
+
+\begin{frame}
+    \frametitle{位置和动量间的傅里叶关系}
+    根据德布罗意关系式，动量和角波矢间具有简单关系
+    \begin{equation}
+        \vb*{p}=\hbar\vb*{k}
+    \end{equation}
+    这意味着，傅里叶变换的像空间，既可以使用波矢空间，也可以使用动量空间。
+\end{frame}
+
+\begin{frame}
+    这样，通过变量代换，就可以由$\vb*{k}$的概率幅得到$\vb*{p}$的概率幅
+    \begin{equation}
+        \phi(\vb*{p})=
+        \phi_0(\vb*{p}/\hbar)=
+        \frac{1}{(2\pi)^{3/2}}\Itnt\psi(\vb*{r})
+        \exp(-\i\vb*{p}\cdot\vb*{r}/\hbar)\dd^3x
+    \end{equation}
+    由于$\dd^3k=\dd^3p/\hbar^3$，逆变换可以改写为
+    \begin{equation}
+        \psi(\vb*{r})=\frac{1}{(2\pi)^{3/2}}\frac{1}{\hbar^3}\Itnt\phi(\vb*{p})\exp(\i\vb*{p}\cdot\vb*{r}/\hbar)\dd^3p
+    \end{equation}
+    这里$1/\hbar^3$位于逆变换，但可以将其拆分为两个$1/\hbar^{3/2}$并均等的置于变换和逆变换。
+\end{frame}
+
+\begin{frame}
+    \begin{theorem}[波函数的傅里叶变换]
+        \setlength{\parskip}{0pt}
+        记波函数$\psi(\vb*{r})$的傅里叶变换为$\phi(\vb*{p})$
+        \begin{equation}
+            \phi(\vb*{p})=\frac{1}{(2\pi\hbar)^{3/2}}\Itnt\psi(\vb*{r})\exp(-\i\vb*{p}\cdot\vb*{r}/\hbar)\dd^3x
+        \end{equation}
+        记相应逆变换为
+        \begin{equation}
+            \psi(\vb*{r})=\frac{1}{(2\pi\hbar)^{3/2}}\Itnt\phi(\vb*{p})\exp(\i\vb*{p}\cdot\vb*{r}/\hbar)\dd^3p
+        \end{equation}
+        那么，波函数$\psi(\vb*{r})$和波函数的傅里叶变换$\phi(\vb*{p})$将具有以下意义
+        \begin{itemize}
+            \item $\abs{\psi(\vb*{r})}^2$表示了粒子的位矢为$\vb*{r}$的概率密度。
+            \item $\abs{\phi(\vb*{p})}^2$表示了粒子的动量为$\vb*{p}$的概率密度。
+        \end{itemize}
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{位置和动量间的傅里叶关系}
+    动量和位置间的傅里叶关系，本质上，是德布罗意关系式$\vb*{p}=\hbar\vb*{k}$的结果
+\end{frame}
+
+\begin{frame}
+    \frametitle{不确定性原理}
+    不确定性原理：经典粒子中轨道的想法对于微观粒子究竟在多大程度上适用？
+
+    \begin{itemize}
+        \item 粒子的位置服从$|\psi(\vb*{r})|^2$的分布
+        \item 粒子的动量服从$|\phi(\vb*{p})|^2$的分布
+    \end{itemize}
+    因此，只能说，粒子的位置和动量有较大概率处于某一范围内，无法给出确切值。
+\end{frame}
+
+\begin{frame}
+    \frametitle{不确定性原理}
+    那么能否同时尽可能准确的测定位置和动量，得到比较准确的轨道？
+
+    遗憾的是，这也是无法完成的。
+\end{frame}
+
+\begin{frame}
+    \frametitle{不确定性原理}
+    动量的概率幅$\phi(\vb*{p})$是位置的概率幅$\psi(\vb*{r})$的傅里叶变换，而相似性质指出
+    \begin{equation}
+        \F{\sqrt{\lambda}\cdot\psi(\lambda\vb*{r})}=\frac{1}{\sqrt{\lambda}}\cdot\phi\qty(\frac{\vb*{p}}{\lambda})
+    \end{equation}
+    若记$\delt{x},\delt{p}$为不确定度，则
+    \begin{equation}
+        \delt{x}\cdot\delt{p}=\text{定值}
+    \end{equation}
+    由此可见，位置的不确定性$\delt{x}$和动量的不确定性$\delt{p}$将相互制约
+    \begin{itemize}
+        \item 确定位置（$\delt{x}$很小）将导致动量的不确定（$\delt{p}$很大）。
+        \item 确定动量（$\delt{p}$很小）将导致位置的不确定（$\delt{x}$很大）。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{不确定性原理}
+    \begin{theorem}[不确定原理]
+        不确定性关系指出，微观粒子的位置和动量的不确定性是相互制约的
+        \begin{equation}
+            \delt{x}\cdot\delt{p}\geq\frac{\hbar}{2}
+        \end{equation}
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{不确定性原理}
+    \begin{itemize}
+        \item 不确定性原理告诉我们，同时尽可能准确的测出微观粒子的位置和动量的努力存在一个不可逾越，无关测量本身，由量子力学基本原理所决定的物理极限。
+        \item 不确定性原理的本质是，由于波粒二象性和德布罗意关系式，微观粒子的位置和动量间存在傅里叶关系，而相似性质表明原函数和像函数不能同时被压缩。
+    \end{itemize}
+\end{frame}

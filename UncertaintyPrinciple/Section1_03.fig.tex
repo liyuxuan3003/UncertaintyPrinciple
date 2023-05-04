@@ -1,0 +1,14 @@
+\documentclass{xStandalone}
+
+\begin{document}
+\begin{tikzpicture}
+
+
+\foreach \x in {-5,-4.99,...,5}
+{
+    \path (\x,0) coordinate (C);
+    \fill[white!\fpeval{min(100,100*((sin(2*\x)/(2*\x))^2)^(1/2))}!black] ($(C)+(-0.007,-1)$) rectangle ($(C)+(0.007,1)$);
+}
+
+\end{tikzpicture}
+\end{document}

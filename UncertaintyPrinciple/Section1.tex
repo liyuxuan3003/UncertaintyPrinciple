@@ -1,0 +1,238 @@
+\section{物理部分的准备}
+
+\subsection{德布罗意关系式}
+
+\begin{frame}
+    \frametitle{德布罗意关系式}
+    在大学物理3中，我们曾学过德布罗意关系式，比较熟悉的形式是
+    \begin{equation}
+        E=h\nu\qquad
+        p=\frac{h}{\lambda}\label{德布罗意关系式原始1}
+    \end{equation}
+    然而这个式子并不对称，有失物理学的美感。
+\end{frame}
+
+\begin{frame}
+    \frametitle{波的描述}
+    在大学物理1中，我们曾学过一维简谐平面机械波的波函数，常用的一种形式是
+    \begin{equation}
+        f(x,t)=A\cos\qty[2\pi\qty(\nu t-\frac{x}{\lambda})+\phi]\label{一维机械波}
+    \end{equation}
+    \begin{itemize}
+        \item 关于波的时间周期特性的描述，使用的物理量是频率$\nu$\vspace{1ex}
+        \item 关于波的空间周期特性的描述，使用的物理量是波长$\lambda$\vspace{1ex}
+    \end{itemize}
+    很明显，频率$\nu$和波长的$\lambda$的地位是不对等的。
+\end{frame}
+
+\begin{frame}
+    \frametitle{波的描述}
+    \begin{columns}[t] 
+        \begin{column}{6cm} 
+            波的时间周期性的描述
+            \begin{itemize}
+                \item 周期$T$\quad 同一空间点上，相隔多长时间振动状态重复一次。
+                \item 频率$\nu=1/T$\\单位时间振动状态的重复次数。
+                \item 角频率$\omega=2\pi/T=2\pi\nu$\\单位时间的相位变化。
+            \end{itemize}
+        \end{column}
+        \begin{column}{6cm} 
+            波的空间周期性的描述
+            \begin{itemize}
+                \item 波长$\lambda$\quad 同一时间点上，相隔多少距离振动状态重复一次。
+                \only<-1>{\item ？\\\vphantom{？}}
+                \only<-1>{\item ？\\\vphantom{？}}
+                \only<2->{\item 波数$\kappa=1/\lambda$\\单位空间振动状态的重复次数。}
+                \only<2->{\item 角波数$k=2\pi/\lambda=2\pi\kappa$\\单位空间的相位变化。}
+            \end{itemize}
+        \end{column}
+    \end{columns}\vspace{3ex}
+
+    \uncover<2->{\centering 形象的说，波数就是单位空间距离上波形的个数。}
+\end{frame}
+
+\begin{frame}
+    \frametitle{波的描述}
+    基于角频率$\omega$和角波数$k$，一维平面简谐波的波函数\eqref{一维机械波}可以重表述为
+    \begin{equation}
+        f(x,t)=A\cos[\omega t-kx+\phi]\label{一维机械波简化}
+    \end{equation}
+
+    引入角波矢$\vb*{k}$，其值为角波数$k$，其方向为波的传播方向，将\eqref{一维机械波简化}由一维推广至三维
+    \begin{equation}
+        f(\vb*{r},t)=A\cos[\omega t-\vb*{k}\cdot\vb*{r}+\phi]\label{三维机械波简化}
+    \end{equation}
+\end{frame}
+
+\begin{frame}
+    \frametitle{约化普朗克常数}
+    现在回到德布罗意关系式\eqref{德布罗意关系式原始1}，代入角频率$\omega$和角波矢$\vb*{k}$
+    \begin{equation}
+        E=\frac{h}{2\pi}\omega\qquad
+        \vb*{p}=\frac{h}{2\pi}\vb*{k}\label{德布罗意关系式原始2}
+    \end{equation}
+    \begin{definition}[约化普朗克常数]
+        定义约化普朗克常数$\hbar$为
+        \begin{equation}
+            \hbar=\frac{h}{2\pi}
+        \end{equation}
+    \end{definition}
+\end{frame}
+
+\begin{frame}
+    \frametitle{德布罗意关系式}
+    \begin{theorem}[德布罗意关系式]
+        德布罗意关系式建立了量子力学中，波和粒子间的关系
+        \begin{equation}
+            E=\hbar\omega\qquad
+            \vb*{p}=\hbar\vb*{k}
+        \end{equation}
+        即，能量正比于角频率，动量正比于角波矢，比例系数为约化普朗克常数。
+    \end{theorem}
+\end{frame}
+
+\subsection{波粒二象性}
+
+\begin{frame}
+    \frametitle{波粒二象性}
+    \begin{center}
+        如何理解波粒二象性？
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{片面夸大波动性的观点}
+    \begin{itemize}
+        \item 观点的内容：电子是一种物质波包。
+        \item 观点的缺陷：电子具有原子性，未曾观察到“电子的碎片”。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{片面夸大粒子性的观点}
+    \begin{itemize}
+        \item 观点的内容：电子波是由大量电子构成的疏密波（类比声波）。
+        \item 观点的缺陷：电子的波动性不依赖于大量电子的存在，单个电子也具有波动性！
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{电子波的双缝干涉实验}
+    电子的波动性，可以仿照光的双缝干涉实验或单缝衍射实验进行验证。
+    \begin{columns}[t] 
+        \begin{column}{6cm} 
+            \begin{figure}
+                \centering\includegraphics[width=4.75cm]{build/Section1_01.fig.pdf}
+                \caption{双缝干涉实验的器具}
+            \end{figure}
+        \end{column}
+        \begin{column}{6cm} 
+            \begin{figure}
+                \centering\includegraphics[width=5cm]{build/Section1_02.fig.pdf}
+                \caption{双缝干涉图样}
+            \end{figure}
+            \begin{figure}
+                \centering\includegraphics[width=5cm]{build/Section1_03.fig.pdf}
+                \caption{单缝衍射图样}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{电子波的双缝干涉实验}
+    \begin{enumerate}
+        \item 令大量电子通过双缝，出现干涉条纹。
+        \item 令电子一个一个通过双缝，最初，出现随机的点，一段时间后，出现干涉条纹。
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{电子波的双缝干涉实验}
+    关于单电子的双缝干涉实验，常总结为
+    \begin{center}
+        少量电子\textbf{体现}粒子性，大量电子\textbf{体现}波动性。
+    \end{center}
+    这个说法很讨巧，但回避了本质，且常被误读为
+    \begin{center}
+        少量电子\textbf{具有}粒子性，大量电子\textbf{具有}波动性。
+    \end{center}
+    这个实验恰恰表明了：\textbf{即便是单个电子，也具有波动性！}
+\end{frame}
+
+\begin{frame}
+    \frametitle{电子波的双缝干涉实验}
+    \begin{center}
+        电子的波动性不依赖于大量电子的存在，单个电子也具有波动性！
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{粒子？波？}
+    经典物理中，粒子应当具有以下两点特性
+    \begin{enumerate}
+        \item 粒子具有原子性，是不可分割的。
+        \item 粒子具有确定的轨道，是可以确定任意时刻粒子的位置和速度。
+    \end{enumerate}
+    经典物理中，波应当具有以下两点特征
+    \begin{enumerate}
+        \item 波代表了某种物理量在空间上的分布。
+        \item 波具有衍射和干涉的现象。
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{粒子？波？}
+    关于量子力学中的波粒二象性，我们到底知道什么？
+    \begin{itemize}
+        \item 电子确实具有原子性，但其是否具有确定的轨道是未曾验证的。
+        \item 电子波可以发生干涉和衍射，但其代表了何种物理量的分布也是未曾确定的。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{波粒二象性}
+    \begin{center}
+        量子力学中的波粒二象性，只包含了部分的的波动性和部分的粒子性。
+    \end{center}
+\end{frame}
+
+\subsection{波函数}
+
+\begin{frame}
+    \frametitle{单电子干涉实验的统计性}
+    单电子干涉实验的结果，表现的其实是电子的统计行为
+    \begin{itemize}
+        \item 通过的电子数较少时（抛硬币的次数较少时），无显著规律。
+        \item 通过的电子数较多时（抛硬币的次数较多），服从干涉图样的确定分布。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{单电子干涉实验的统计性}
+    \begin{center}
+        量子力学中，粒子的运动是概率的，波动着的是概率。
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{概率？概率密度？}
+    \begin{center}
+        概率--概率密度\qquad
+        质量--质量密度
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{波函数}
+    通常用$\psi(\vb*{r},t)$表示波函数，由于概率密度分是布与光强分布一致
+    \begin{equation}
+        \text{波的强度}\propto|\text{波幅}|^2
+    \end{equation}
+    因此
+    \begin{itemize}
+        \item 波函数模的平方$\abs{\psi(\vb*{r},t)}^2$才表示概率密度分布。
+        \item 波函数$\psi(\vb*{r},t)$无明确物理意义，通常称为概率密度幅。
+    \end{itemize}
+    以上，即是波函数的统计诠释。
+\end{frame}

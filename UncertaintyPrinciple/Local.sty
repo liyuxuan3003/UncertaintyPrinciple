@@ -1,0 +1,9 @@
+\tikzset{point/.style={circle,draw=#1,solid,thin,radius=0.03,fill=white,inner sep=0.8pt},point/.default=black}
+
+\NewDocumentCommand{\Gauss}{o}
+{
+    \IfValueTF{#1}{\mathscr{G}_{#1}}{\mathscr{G}}
+}
+
+\newcommand{\Cmv}{C_{\text{m},V}}
+\newcommand{\Cmp}{C_{\text{m},P}}
