@@ -54,6 +54,7 @@
 
 \begin{frame}
     \frametitle{方波的傅里叶展开}
+    我们如何认识方波？
     \begin{itemize}
         \item 方波可以视为一个随时间变化的函数$f(x)$，有时为$1$，有时为$-1$。
         \item 方波亦可以视为一系列不同频率的正弦函数$\sin\omega x$按比例$F(\omega)$的叠加。
@@ -75,7 +76,7 @@
     \end{itemize}
     傅里叶变换研究的，就是时域函数$f\,(x)$和频域函数$F(\omega)$之间如何转化。
 
-    频域函数$F(\omega)$的实质，就是傅里叶级数中的“叠加系数”，但换了一种写法。
+    频域函数$F(\omega)$的实质，就是傅里叶级数中的“叠加系数$b_n$”，但换了一种写法。
 \end{frame}
 
 \subsection{傅里叶变换}
@@ -87,6 +88,23 @@
         \item 傅里叶级数的有正弦和余弦两套叠加系数，谁将作为频域函数？
         \item 傅里叶级数只能适用于周期函数，那非周期函数如何处理？
     \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{欧拉公式}
+
+    \begin{theorem}[欧拉公式]
+        欧拉公式建立了三角函数与复指数间的联系
+        \begin{equation}
+            \e^{\i\theta}=\cos\theta+\i\sin\theta
+        \end{equation}
+    \end{theorem}
+
+    欧拉公式亦可以反过来用，即将三角函数展开为复指数
+    \begin{equation}
+        \cos\theta=\frac{\e^{\i\theta}+\e^{-\i\theta}}{2}\qquad
+        \sin\theta=\frac{\e^{\i\theta}-\e^{-\i\theta}}{2\i}
+    \end{equation}
 \end{frame}
 
 \begin{frame}
@@ -124,7 +142,7 @@
         c_k=
         \begin{cases}
             \mal{\frac{a_n-\i b_n}{2}},&k>0,~n=+k\\[3mm]
-            \mal{\frac{a_0}{2}},&k=0\\[3mm]
+            \mal{a_0},&k=0\\[3mm]
             \mal{\frac{a_n+\i b_n}{2}},&k<0,~n=-k
         \end{cases}
     \end{equation}

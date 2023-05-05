@@ -1,0 +1,17 @@
+\documentclass{xStandalone}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+    \tikzset{axi/.style={gray,very thin,->}}
+
+    \draw[axi] (-3,0) coordinate (X1) -- (3,0) coordinate (X2) node[above] {$p$};
+    \draw[axi] (0,0) coordinate (O) -- (0,4) coordinate (Y) node[right] {\small $\abs{\phi(p)}^2$};
+
+    \draw[thick] plot[domain=-2.8:2.8,samples=2000,smooth] (\x,{3.0*exp(-\x*\x)});
+
+    \path (0,3.0) node[point] {} node[above left] {$1/\sqrt{\pi}\hbar\alpha$};
+
+    \draw[dotted] (1,0) node[point] {} node[below] {$\alpha\hbar$} -- ++(0,3*0.368) node[point] {}; 
+    \draw[dotted] (-1,0) node[point] {} node[below] {$-\alpha\hbar$} -- ++(0,3*0.368) node[point] {}; 
+\end{tikzpicture}
+\end{document}
